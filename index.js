@@ -24,8 +24,9 @@ app.get("/",(req,res)=>{
 
 
 app.post("/api/user/add",(res,req)=>{
+    const user = username.tabela_usuario
 
-    const data = new username (res,body);
+    const data = new user (res,body);
     data.save().then((data)=>{
         res.status(201).send({output:`Novo usuario Inserido`, payload:data})
 
